@@ -47,8 +47,6 @@ if (PRODUCTION) {
 
         return {
             '/': { page: '/' },
-            '/hw/guide': { page: '/hw/guide' },
-            '/codingpack/os-image-guide': { page: '/codingpack/os-image-guide' },
             ...posts
         }
     }
