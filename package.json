@@ -1,22 +1,22 @@
 {
-    "name": "cp949.github.io",
-    "version": "1.0.51",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/cp949/cp949.github.io.git"
-    },
-    "keywords": [
-        "aicodingblock"
-    ],
-    "author": "",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/cp949/cp949.github.io/issues"
-    },
-    "homepage": "https://github.com/cp949/cp949.github.io#readme"
+  "name": "cp949.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cp949/cp949.github.io.git"
+  },
+  "keywords": [
+    "aicodingblock"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cp949/cp949.github.io/issues"
+  },
+  "homepage": "https://github.com/cp949/cp949.github.io#readme"
 }
