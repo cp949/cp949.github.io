@@ -79,6 +79,8 @@ function MainLayout(props: Props) {
                         '& .MuiDrawer-paper': {
                             width: SIDEMENU_WIDTH,
                             boxSizing: 'border-box',
+                            overflowX: 'hidden',
+
                             // '&::-webkit-scrollbar': {
                             //     width: 10,
                             // },

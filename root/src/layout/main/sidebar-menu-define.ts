@@ -42,7 +42,7 @@ const menusTemp: (ILabel | IDivider | IMenu | ISection)[] = [
     {
         type: 'menu',
         icon: 'dashboard',
-        title: 'Home',
+        title: '스타일 샘플',
         href: '/post-frame/style-sample',
     },
 

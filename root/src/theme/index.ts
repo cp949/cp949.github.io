@@ -14,6 +14,9 @@ const theme = createTheme({
         error: {
             main: red.A400,
         },
+        text: {
+            primary: '#0A1929',
+        },
     },
     components: {
         // MuiCssBaseline: {

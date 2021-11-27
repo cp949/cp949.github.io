@@ -37,8 +37,8 @@ export default function SiteListPart() {
 
                 <PageLink
                     className={pageLinkClassName}
-                    title="PC 프로그램 소스 코드(깃허브)"
-                    subtitle="PC 프로그램 소스코드가 GITHUB에 공개되어 있습니다."
+                    title="웹사이트 소스 코드"
+                    subtitle="웹사이트의 소스코드가 GITHUB에 공개되어 있습니다."
                     imageSrc={routerUrlOf('/images/home/github-120.png')}
                     href={'https://github.com/cp949/cp949.github.io.git'}
                 />

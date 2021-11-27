@@ -6,7 +6,7 @@ import { observer } from 'mobx-react'
 import { useRouter } from 'next/router'
 import { routerUrlOf } from 'src/lib/urls'
 import useStore from 'src/store/useStore'
-import { SIDEMENU_FG_COLOR } from '../../main-layout-constants'
+import { SIDEMENU_BG_COLOR, SIDEMENU_FG_COLOR } from '../../main-layout-constants'
 import { IMenu, isCurrentMenu, isCurrentSection, ISection, menus } from '../../sidebar-menu-define'
 import DrawerHeader from '../drawer-header/DrawerHeader'
 import MenuItem from './MenuItem'
@@ -30,15 +30,30 @@ function Sidebar() {
         <Box
             component="nav"
             sx={{
+                position: 'relative',
                 color: SIDEMENU_FG_COLOR,
+                backgroundColor: SIDEMENU_BG_COLOR,
                 '& > .MuiDivider-root': {
                     backgroundColor: 'rgba(255, 255, 255, 0.2)',
                     marginTop: 8,
                     marginBottom: 8,
                 },
+                height: '100%',
+                '::before': {
+                    position: 'absolute',
+                    content: "''",
+                    top: 0,
+                    left: 0,
+                    width: '100%',
+                    height: '100%',
+                    zIndex: 0,
+                    background: `url(${routerUrlOf('/images/sidebar/bg_sidebar.jpg')})`,
+                    backgroundSize: 'cover',
+                    // filter: 'blur(0.5px)',
+                },
             }}
         >
-            <DrawerHeader sx={{ justifyContent: 'flex-start' }}>
+            <DrawerHeader sx={{ justifyContent: 'flex-start', color: '#FFF' }}>
                 <Box
                     component="a"
                     sx={{
@@ -46,8 +61,9 @@ function Sidebar() {
                         flexGrow: 1,
                         pl: 1,
                         pr: 1,
-                        borderRadius: 1,
                         pt: '6px',
+                        zIndex: 1,
+                        borderRadius: 1,
                         fontSize: '1.1rem',
                         textDecoration: 'none',
                         ':hover .title1': {
@@ -65,7 +81,7 @@ function Sidebar() {
                         sx={{
                             flexGrow: 1,
                             mt: '4px',
-                            color: 'primary.main',
+                            color: '#fff',
                             fontSize: '1.1rem',
                             fontFamily: 'Black Han Sans',
                             textDecoration: 'none',
@@ -78,7 +94,7 @@ function Sidebar() {
                     size="small"
                     onClick={sidebarStore.toggleOpen}
                     sx={{
-                        color: SIDEMENU_FG_COLOR,
+                        color: '#fff',
                     }}
                 >
                     {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}

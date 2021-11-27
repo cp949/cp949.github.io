@@ -13,6 +13,7 @@ const AppBar = styled(MuiAppBar, {
     shouldForwardProp: (prop) => prop !== 'shift',
 })<AppBarProps>(({ theme, shift }) => ({
     zIndex: theme.zIndex.drawer + (shift ? 1 : -1),
+    background: '#fff',
     transition: theme.transitions.create(['margin', 'width'], {
         easing: theme.transitions.easing.sharp,
         duration: theme.transitions.duration.leavingScreen,
@@ -53,8 +54,8 @@ export default function Topbar(props: Props) {
 
     const shift = isSidebarOpen && !smDown ? true : false
     return (
-        <AppBar position="fixed" shift={shift}>
-            <Toolbar>
+        <AppBar position="fixed" shift={shift} elevation={0} sx={{ borderBottom: '1px solid rgba(0,0,0,0.1)' }}>
+            <Toolbar sx={{ color: 'text.primary' }}>
                 <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center' }}>
                     <IconButton
                         onClick={onClickMenuButton}
@@ -66,9 +67,14 @@ export default function Topbar(props: Props) {
                             marginRight: '16px',
                         }}
                     >
-                        {isSidebarOpen ? <MenuOpenIcon htmlColor="#fff" /> : <MenuIcon htmlColor="#f0f0f0" />}
+                        {isSidebarOpen ? <MenuOpenIcon color="primary" /> : <MenuIcon color="primary" />}
                     </IconButton>
-                    <Typography variant="subtitle1" noWrap component="div" sx={{ fontSize: '1.1rem' }}>
+                    <Typography
+                        variant="subtitle1"
+                        noWrap
+                        component="div"
+                        sx={{ fontSize: '1.2rem', fontWeight: 700, fontFamily: 'Do Hyeon' }}
+                    >
                         {title}
                     </Typography>
                 </Box>

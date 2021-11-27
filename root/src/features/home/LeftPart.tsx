@@ -1,4 +1,3 @@
-import ChevronRight from '@mui/icons-material/ChevronRight'
 import GitHubIcon from '@mui/icons-material/GitHub'
 import { Box, Button, useMediaQuery } from '@mui/material'
 import { useTheme } from '@mui/material/styles'
@@ -40,6 +39,7 @@ export default function LeftPart() {
                     }),
                     position: 'relative',
                     maxWidth: '560px',
+                    width: '100%',
                     display: 'flex',
                     border: '0px solid blue',
                     flexDirection: 'column',
@@ -55,6 +55,7 @@ export default function LeftPart() {
                         ...(isNarrow && {
                             mt: 8,
                             fontSize: '40px',
+                            minHeight: '200px',
                         }),
                         ...(!isNarrow && {
                             fontSize: '56px',
@@ -67,8 +68,7 @@ export default function LeftPart() {
                     }}
                 >
                     <Box>@cp949</Box>
-                    <Box sx={{ color: '#005CB8' }}>개발자</Box>
-                    <Box>노트</Box>
+                    <Box sx={{ color: '#005CB8' }}>개인 노트</Box>
                 </Box>
                 <Box
                     sx={{
@@ -81,7 +81,7 @@ export default function LeftPart() {
                     }}
                 >
                     <Box sx={{ color: '#555', fontSize: '1rem', fontWeight: 400, mt: mdDown ? 8 : 2 }}>
-                        개인적인 스터디를 정리하는 개발자 블로그 사이트입니다.
+                        개인적인 메모를 정리하는 사이트입니다.
                     </Box>
                 </Box>
                 <Box
@@ -94,8 +94,14 @@ export default function LeftPart() {
                             width: '90px',
                         }),
                         ...(!isNarrow && {
-                            top: '160px',
-                            width: '116px',
+                            // top: '190px',
+                            top: 0,
+                            bottom: 0,
+                            objectFit: 'contain',
+                            border: '0px solid red',
+                            width: '100px',
+                            height: 'calc(100% - 70px)',
+                            minHeight: '200px',
                         }),
                     }}
                     src={routerUrlOf('/images/codiny/3d_movement1.png')}
@@ -107,7 +113,7 @@ export default function LeftPart() {
                         variant="contained"
                         size="large"
                         endIcon={<GitHubIcon fontSize="small" />}
-                        onClick={() => window?.open('https://github.com/cp949')}
+                        onClick={() => window?.open('https://github.com/cp949/cp949.github.io')}
                     >
                         GITHUB
                     </Button>

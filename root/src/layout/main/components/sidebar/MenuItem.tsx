@@ -1,4 +1,4 @@
-import { ListItemIcon, ListItemText } from '@mui/material'
+import { ListItemText } from '@mui/material'
 import React from 'react'
 import { Link, LinkProps } from 'src/components/link'
 import {
@@ -12,7 +12,6 @@ import {
 } from '../../main-layout-constants'
 import { IMenu } from '../../sidebar-menu-define'
 import ListItemLink from './ListItemLink'
-import MenuIcon from './MenuIcon'
 type Props = {
     menu: IMenu
     active: boolean
@@ -44,7 +43,7 @@ export default function MenuItem(props: Props) {
                 '& .MuiListItemText-root': {
                     color: active ? SIDEMENU_FG_COLOR_ACTIVE : SIDEMENU_FG_COLOR,
                     fontWeight: active ? 700 : 500,
-                    marginLeft: active ? '-4px' : 0,
+                    marginLeft: active ? '-6px' : 0,
                     '& .MuiListItemText-primary': {
                         fontSize: '0.9rem',
                     },
@@ -52,9 +51,10 @@ export default function MenuItem(props: Props) {
 
                 ...(active && {
                     backgroundColor: SIDEMENU_BG_COLOR_ACTIVE,
+                    marginLeft: '2px',
                     borderLeft: `4px solid ${SIDEMENU_BORDER_COLOR_ACTIVE}`,
-                    borderTopLeftRadius: 0,
-                    borderBottomLeftRadius: 0,
+                    borderTopLeftRadius: '4px',
+                    borderBottomLeftRadius: '4px',
                 }),
             }}
         >
