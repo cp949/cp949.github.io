@@ -1,5 +1,6 @@
 import { Box, Container, Grid, useMediaQuery } from '@mui/material'
 import { useTheme } from '@mui/material/styles'
+
 import LeftPart from './LeftPart'
 import SiteListPart from './SiteListPart'
 

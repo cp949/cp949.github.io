@@ -7,7 +7,8 @@
     "build": "cross-env NODE_OPTIONS=--max_old_space_size=32000 next build",
     "build:fast": "cross-env NODE_OPTIONS=--max_old_space_size=32000 next build --no-lint",
     "start": "next start",
-    "deploy": "next export",
+    "deploy": "next export && touch ./out/.nojekyll",
+    "pages": "gh-pages -d out -t true",
     "lint": "next lint",
     "postinstall": "rimraf node_modules/react-transition-group/node_modules/@types/react"
   },
@@ -53,6 +54,7 @@
     "eslint-config-next": "12.0.1",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
+    "gh-pages": "^3.2.3",
     "prettier": "^2.4.1",
     "rimraf": "^3.0.2",
     "typescript": "4.4.4"

@@ -49,6 +49,7 @@ function Sidebar() {
                     zIndex: 0,
                     background: `url(${routerUrlOf('/images/sidebar/bg_sidebar.jpg')})`,
                     backgroundSize: 'cover',
+                    backgroundRepeat: 'no-repeat',
                     // filter: 'blur(0.5px)',
                 },
             }}
