@@ -39,23 +39,29 @@ const menusTemp: (ILabel | IDivider | IMenu | ISection)[] = [
         title: 'Home',
         href: '/',
     },
-
-    { type: 'divider' },
-
     {
-        type: 'section',
-        sectionId: nextSectionId(),
-        icon: 'adb',
-        title: '기타',
-        submenus: [
-            {
-                type: 'menu',
-                icon: 'usb',
-                title: '스타일',
-                href: '/post-frame/style-sample',
-            },
-        ],
+        type: 'menu',
+        icon: 'dashboard',
+        title: 'Home',
+        href: '/post-frame/style-sample',
     },
+
+    // { type: 'divider' },
+
+    // {
+    //     type: 'section',
+    //     sectionId: nextSectionId(),
+    //     icon: 'adb',
+    //     title: '기타',
+    //     submenus: [
+    //         {
+    //             type: 'menu',
+    //             icon: 'usb',
+    //             title: '스타일',
+    //             href: '/post-frame/style-sample',
+    //         },
+    //     ],
+    // },
 
     // {
     //     type: 'menu',
